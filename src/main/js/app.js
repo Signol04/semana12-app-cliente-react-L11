@@ -19,15 +19,26 @@ class App extends React.Component {
 	render() {
 		return (
 			<>
-				<h2>Instrumentos</h2>
+				<Titulo entidad="Instrumentos" emoji="🎸"/>
 				<InstrumentoList instrumentos={this.state.instrumentos}/>
 				<hr />
-				<h2>Musicos</h2>
+				<Titulo entidad = "Musico" emoji="🎵"/>
 				<MusicoList musicos={this.state.musicos}/>
 			</>
 		)
 	}
 }
+
+const Titulo = (props)=>{
+	return (
+	<>
+		<hr />
+		<h2>{props.emoji} - {props.entidad}</h2>
+		<span>Listado completo de {props.entidad.toLowerCase()}</span>
+		<hr />
+	</>)
+}
+
 
 class InstrumentoList extends React.Component{
 	render() {

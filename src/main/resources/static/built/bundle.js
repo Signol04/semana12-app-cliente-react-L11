@@ -34134,15 +34134,24 @@ var App = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h2", null, "Instrumentos"), /*#__PURE__*/React.createElement(InstrumentoList, {
+      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Titulo, {
+        entidad: "Instrumentos",
+        emoji: "\uD83C\uDFB8"
+      }), /*#__PURE__*/React.createElement(InstrumentoList, {
         instrumentos: this.state.instrumentos
-      }), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("h2", null, "Musicos"), /*#__PURE__*/React.createElement(MusicoList, {
+      }), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Titulo, {
+        entidad: "Musico",
+        emoji: "\uD83C\uDFB5"
+      }), /*#__PURE__*/React.createElement(MusicoList, {
         musicos: this.state.musicos
       }));
     }
   }]);
   return App;
 }(React.Component);
+var Titulo = function Titulo(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("h2", null, props.emoji, ",", props.entidad), /*#__PURE__*/React.createElement("span", null, "Listado completo de ", props.entidad.toLowerCase()), /*#__PURE__*/React.createElement("hr", null));
+};
 var InstrumentoList = /*#__PURE__*/function (_React$Component2) {
   _inherits(InstrumentoList, _React$Component2);
   var _super2 = _createSuper(InstrumentoList);
